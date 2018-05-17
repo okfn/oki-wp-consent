@@ -21,7 +21,7 @@ function oki_cookieconsent_init() {
     wp_enqueue_script( 'cookieconsent-ga', plugin_dir_url( __FILE__ ) . 'assets/js/cookieconsent-ga.js', array(), array(), false );
 }
 
-add_action( 'wp_footer', 'oki_cookieconsent_load' );
+add_action( 'wp_head', 'oki_cookieconsent_load' );
 
 function oki_cookieconsent_load() {
 
@@ -30,9 +30,6 @@ function oki_cookieconsent_load() {
 
     ?>
     <script>
-        var url_string = window.location.href;
-        var url = new URL(url_string);
-
         var googleAnalyticsCode = {
             id: '<?php echo esc_attr( $googleAnalyticsCode ); ?>'
         };
