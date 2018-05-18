@@ -16,7 +16,7 @@
 add_action( 'wp_enqueue_scripts', 'oki_cookieconsent_init' );
 
 function oki_cookieconsent_init() {
-    /* GA_ID needs to be defined in the wp-config.php file of the running WordPress instance. */
+    /* OKI_GA_ID needs to be defined in the wp-config.php file of the running WordPress instance. */
     $googleAnalyticsCode = (defined( 'OKI_GA_ID' ) ? OKI_GA_ID : '');
 
     ?>
