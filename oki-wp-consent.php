@@ -27,6 +27,6 @@ function oki_cookieconsent_init() {
     </script>
     <?php
 
-    wp_enqueue_script( 'consent', 'https://a.okfn.org/a/a/html/oki/consent/assets/js/consent.js', array(), '', false );
+    wp_enqueue_script( 'consent', 'https://a.okfn.org/html/oki/consent/assets/js/consent.js', array(), '', false );
 
 }
