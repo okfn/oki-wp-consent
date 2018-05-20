@@ -17,13 +17,13 @@ add_action( 'wp_enqueue_scripts', 'oki_cookieconsent_init' );
 
 function oki_cookieconsent_init() {
     /* OKI_GA_ID needs to be defined in the wp-config.php file of the running WordPress instance. */
-    $googleAnalyticsCode = (defined( 'OKI_GA_ID' ) ? OKI_GA_ID : '');
+    $analyticsTrackingID = (defined( 'OKI_GA_ID' ) ? OKI_GA_ID : '');
 
     ?>
     <script>
-        var googleAnalyticsCode = {
-            id: '<?php echo esc_attr( $googleAnalyticsCode ); ?>'
-        };
+      var okiConsent = {
+        analyticsTrackingID: '<?php echo esc_attr( $analyticsTrackingID ); ?>'
+      };
     </script>
     <?php
 
