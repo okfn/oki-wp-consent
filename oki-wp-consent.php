@@ -23,7 +23,7 @@ function oki_cookieconsent_init() {
     // per site and that value will be read and set first. If the GA ID is not set or not available it will
     // default to the value set in wp-config.php. If that value is not available as well, an error in
     // the browser console will be shown.
-    if ($theme_options):
+    if ($theme_options["okfnwp_ga_id"]):
       $analyticsTrackingID = $theme_options["okfnwp_ga_id"];
     else:
       /* OKI_GA_ID needs to be defined in the wp-config.php file of the running WordPress instance. */
