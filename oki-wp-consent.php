@@ -18,9 +18,9 @@ add_action( 'wp_enqueue_scripts', 'oki_cookieconsent_init' );
 function oki_cookieconsent_init() {
 
     if ( is_multisite() ):
-      $theme_options = get_blog_option( "theme_options_option_name", get_current_blog_id() );
+      $theme_options = get_blog_option( get_current_blog_id(), "theme_options_option_name", false );
     else:
-      $theme_options = get_site_option( "theme_options_option_name" );
+      $theme_options = get_site_option( "theme_options_option_name", false );
     endif;
 
     // When used with the official OKI WordPress theme, the Google Analytics tracking ID can be set
