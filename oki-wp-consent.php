@@ -1,9 +1,9 @@
 <?php
 
 /*
-  Plugin Name:  OKI Cookie Consent
+  Plugin Name:  OKF Cookie Consent
   Plugin URI:   https://github.com/okfn/oki-wp-consent
-  Description:  WordPress plugin for enabling Cookie Consent on Open Knowledge International websites
+  Description:  WordPress plugin for enabling Cookie Consent on Open Knowledge Foundation websites
   Version:      0.1
   Author:       Goce Mitevski
   Author URI:   https://www.nicer2.com/
@@ -23,7 +23,7 @@ function oki_cookieconsent_init() {
       $theme_options = get_site_option( "theme_options_option_name", false );
     endif;
 
-    // When used with the official OKI WordPress theme, the Google Analytics tracking ID can be set
+    // When used with the official OKF WordPress theme, the Google Analytics tracking ID can be set
     // per site and that value will be read and set first. If the GA ID is not set or not available it will
     // default to the value set in wp-config.php. If that value is not available as well, an error in
     // the browser console will be shown.
