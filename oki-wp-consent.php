@@ -17,7 +17,7 @@ add_action( 'wp_enqueue_scripts', 'oki_cookieconsent_init' );
 
 function oki_cookieconsent_init() {
     ?>
-    <script defer data-domain="<?php echo gethostname(); ?>" src="https://plausible.io/js/plausible.js"></script>
+    <script defer data-domain="<?php echo $_SERVER['SERVER_NAME']; ?>" src="https://plausible.io/js/plausible.js"></script>
     <?php
 
 }
